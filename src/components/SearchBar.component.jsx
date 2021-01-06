@@ -20,7 +20,6 @@ const Searchbox = styled.input`
   }
 `;
 const SuggestionsWrapper = styled.div`
-  position: absolute;
   width: 100%;
   z-index: 1000;
 `;
@@ -73,11 +72,7 @@ const SearchBar = () => {
               .map((suggestion, i) => {
                 if (i < 5) {
                   return (
-                    <Suggestion
-                      onClick={(event) => {
-                        console.log("Hello", event);
-                      }}
-                    >
+                    <Suggestion>
                       <img
                         src={
                           suggestion.picture.thumbnail
